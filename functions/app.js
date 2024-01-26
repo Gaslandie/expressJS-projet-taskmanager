@@ -10,8 +10,9 @@ const errorHandlerMiddleware = require('./middleware/error-handler')
 
 
 //nos middlewares
-app.use(express.static('./public')) //le contenu à afficher au front-end
+app.use(express.static('../public')) //le contenu à afficher au front-end
 app.use(express.json()) //midlleware pour traiter les requetes json
+app.use(cors())
 
 
 //nos routes
