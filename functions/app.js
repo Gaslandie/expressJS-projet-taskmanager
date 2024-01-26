@@ -1,5 +1,6 @@
 const express = require('express')
 const tasks = require('./routes/tasks') 
+const cors = require('cors')
 const app = express()
 require('dotenv').config //chargement des variables d'environnement
 const connectDB =require('./db/connection') //pour la connexion à notre base de donnees
