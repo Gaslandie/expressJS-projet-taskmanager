@@ -9,6 +9,7 @@ const formAlertDOM = document.querySelector('.form-alert') //afficher si c'est o
 const showTasks = async () => {
   loadingDOM.style.visibility = 'visible' //chargement en cours
   try {
+    //en prod:https://us-central1-task-manager-50717.cloudfunctions.net/app/api/v1/tasks
     const {data: { tasks }} = await axios.get('/api/v1/tasks') //recuperation de notre backend
     if (tasks.length < 1) { //si pas de tache,afficher 'aucune tache'
       tasksDOM.innerHTML = '<h5 class="empty-list">Aucune tâche pour le moment</h5>'

@@ -2,7 +2,7 @@ const express = require('express')
 const tasks = require('./routes/tasks') 
 const cors = require('cors')
 const app = express()
-require('dotenv').config //chargement des variables d'environnement
+require('dotenv').config() //chargement des variables d'environnement
 const connectDB =require('./db/connection') //pour la connexion à notre base de donnees
 
 //notFound et gestion d'erreur
@@ -11,7 +11,7 @@ const errorHandlerMiddleware = require('./middleware/error-handler')
 
 
 //nos middlewares
-app.use(express.static('../public')) //le contenu à afficher au front-end
+// app.use(express.static('../public')) //le contenu à afficher au front-end en local, en prop c'est gerer par firebase
 app.use(express.json()) //midlleware pour traiter les requetes json
 app.use(cors())
 
