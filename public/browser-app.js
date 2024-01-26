@@ -39,6 +39,7 @@ const showTasks = async () => {
       .join('')//pour transformer notre tableau de chaine de caractère en un element injectable dans le dom
     tasksDOM.innerHTML = allTasks
   } catch (error) {
+    console.log(error)
     tasksDOM.innerHTML =
       '<h5 class="empty-list">Il ya eu une erreur,merci de reessayer plus tard...</h5>'
   }
