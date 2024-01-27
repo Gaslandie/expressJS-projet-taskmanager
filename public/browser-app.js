@@ -1,4 +1,5 @@
 /* eslint-disable no-undef */
+/* eslint-disable max-len */
 const tasksDOM = document.querySelector('.tasks'); // ou seront nos taches
 const loadingDOM = document.querySelector('.loading-text');// en attendant que nos taches s'affiche
 const formDOM = document.querySelector('.task-form');// formulaire de tache
@@ -11,7 +12,8 @@ const showTasks = async () => {
   loadingDOM.style.visibility = 'visible'; // chargement en cours
   try {
     // eslint-disable-next-line no-undef
-    const {data: {tasks}} = await axios.get('/api/v1/tasks'); // recuperation de notre backend
+    const {data: {tasks}} = await axios.
+    get('https://us-central1-gestionnaire-de-tache-7deac.cloudfunctions.net/app/api/v1/tasks'); // recuperation de notre backend
     if (tasks.length < 1) { // si pas de tache,afficher 'aucune tache'
       tasksDOM.innerHTML = '<h5 class="empty-list">Aucune tâche pour le moment</h5>';
       loadingDOM.style.visibility = 'hidden'; // pas besoin du message chargement en cours
@@ -56,7 +58,7 @@ tasksDOM.addEventListener('click', async (e) => {
     loadingDOM.style.visibility = 'visible'; // en attendant le retour de la mise à jour on affiche chargement en cours
     const id = el.parentElement.dataset.id; // recuperation de notre id pour loperation backend
     try {
-      await axios.delete(`/api/v1/tasks/${id}`); // on attend de supprimer la tache
+      await axios.delete(`https://us-central1-gestionnaire-de-tache-7deac.cloudfunctions.net/app/api/v1/tasks/${id}`); // on attend de supprimer la tache
       showTasks();// pour afficher les taches restantes ou pas
     } catch (error) {
       console.log(error);
@@ -72,7 +74,7 @@ formDOM.addEventListener('submit', async (e) => {
   const name = taskInputDOM.value; // name car on a decidé de donner ce nom à notre tache au niveau du backend
 
   try {
-    await axios.post('/api/v1/tasks', {name});
+    await axios.post('https://us-central1-gestionnaire-de-tache-7deac.cloudfunctions.net/app/api/v1/tasks', {name});
     showTasks();// on attend d'envoyer notre nouvelle tache dans la base de donnée pour afficher la mise à jour
     taskInputDOM.value = '';// on reinitialise le contenu de notre input
     formAlertDOM.style.display = 'block';

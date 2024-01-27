@@ -11,7 +11,8 @@ let tempName;
 const showTask = async () => {
   try {
     // eslint-disable-next-line no-undef
-    const {data: {task}} = await axios.get(`/api/v1/tasks/${id}`);// on recupere notre tache avec l'id
+    const {data: {task}} = await axios.get(`https://us-central1-gestionnaire-de-tache-7deac.cloudfunctions.net/app
+    /api/v1/tasks/${id}`);// on recupere notre tache avec l'id
     const {_id: taskID, completed, name} = task; // destructuration
 
     taskIDDOM.textContent = taskID; // l'id de notre tache dans lelement taskIddom
@@ -36,7 +37,8 @@ editFormDOM.addEventListener('submit', async (e) => {
     const taskCompleted = taskCompletedDOM.checked;
 
     // eslint-disable-next-line no-undef
-    const {data: {task}} = await axios.patch(`/api/v1/tasks/${id}`, {// modifier notre tache
+    const {data: {task}} = await axios.patch(`https://us-central1-gestionnaire-de-tache-7deac.cloudfunctions.net/app
+    /api/v1/tasks/${id}`, {// modifier notre tache
       name: taskName,
       completed: taskCompleted,
     });
