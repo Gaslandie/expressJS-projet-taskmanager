@@ -1,8 +1,8 @@
-const mongoose = require('mongoose')
-require('dotenv').config();
+const mongoose = require("mongoose");
+require("dotenv").config();
 
-const connectionString = process.env.MONGO_URI
-//connection à la base de données
+const connectionString = process.env.MONGO_URI;
+// connection à la base de données
 // const connectDB = ()=>{
 //   return  mongoose.connect(connectionString)
 // }
@@ -17,6 +17,5 @@ const connectDB = async () => {
 };
 
 
-module.exports = connectDB      
+module.exports = connectDB;
 
-        

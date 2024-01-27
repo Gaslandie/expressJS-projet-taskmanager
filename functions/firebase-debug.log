@@ -1,0 +1,65 @@
+[debug] [2024-01-27T00:44:15.539Z] ----------------------------------------------------------------------
+[debug] [2024-01-27T00:44:15.542Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\asus\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js functions:shell
+[debug] [2024-01-27T00:44:15.543Z] CLI Version:   13.1.0
+[debug] [2024-01-27T00:44:15.543Z] Platform:      win32
+[debug] [2024-01-27T00:44:15.543Z] Node Version:  v20.10.0
+[debug] [2024-01-27T00:44:15.544Z] Time:          Sat Jan 27 2024 01:44:15 GMT+0100 (Central European Standard Time)
+[debug] [2024-01-27T00:44:15.544Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-01-27T00:44:15.675Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-01-27T00:44:15.677Z] > authorizing via signed-in user (gassma803@gmail.com)
+[debug] [2024-01-27T00:44:15.677Z] [iam] checking project gestionnaire-de-tache-7deac for permissions ["firebase.projects.get"]
+[debug] [2024-01-27T00:44:15.679Z] > refreshing access token with scopes: []
+[debug] [2024-01-27T00:44:15.682Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-01-27T00:44:15.683Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-01-27T00:44:16.267Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-01-27T00:44:16.268Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-01-27T00:44:16.303Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/gestionnaire-de-tache-7deac:testIamPermissions [none]
+[debug] [2024-01-27T00:44:16.303Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/gestionnaire-de-tache-7deac:testIamPermissions x-goog-quota-user=projects/gestionnaire-de-tache-7deac
+[debug] [2024-01-27T00:44:16.304Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/gestionnaire-de-tache-7deac:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-01-27T00:44:17.069Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/gestionnaire-de-tache-7deac:testIamPermissions 200
+[debug] [2024-01-27T00:44:17.070Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/gestionnaire-de-tache-7deac:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-01-27T00:44:17.076Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-01-27T00:44:17.080Z] defaultcredentials: writing to file C:\Users\asus\AppData\Roaming\firebase\gassma803_gmail_com_application_default_credentials.json
+[debug] [2024-01-27T00:44:17.086Z] DEBUG: Setting GAC to C:\Users\asus\AppData\Roaming\firebase\gassma803_gmail_com_application_default_credentials.json
+[debug] [2024-01-27T00:44:17.087Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/gestionnaire-de-tache-7deac/adminSdkConfig [none]
+[debug] [2024-01-27T00:44:17.406Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/gestionnaire-de-tache-7deac/adminSdkConfig 200
+[debug] [2024-01-27T00:44:17.406Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/gestionnaire-de-tache-7deac/adminSdkConfig {"projectId":"gestionnaire-de-tache-7deac","storageBucket":"gestionnaire-de-tache-7deac.appspot.com"}
+[debug] [2024-01-27T00:44:17.445Z] [functions] Watching "C:\Users\asus\OneDrive\Bureau\task manager\functions" for Cloud Functions...
+[debug] [2024-01-27T00:44:17.451Z] Validating nodejs source
+[debug] [2024-01-27T00:44:19.737Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "dotenv": "^8.6.0",
+    "express": "^4.17.1",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-01-27T00:44:19.737Z] Building nodejs source
+[debug] [2024-01-27T00:44:19.738Z] Failed to find version of module node: reached end of search path C:\Users\asus\OneDrive\Bureau\task manager\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "20". Using node@20 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-01-27T00:44:19.743Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-01-27T00:44:19.749Z] Found firebase-functions binary at 'C:\Users\asus\OneDrive\Bureau\task manager\functions\node_modules\.bin\firebase-functions'
