@@ -63,3 +63,15 @@
 [info] i  functions: Loaded environment variables from .env. 
 [debug] [2024-01-27T00:44:19.743Z] Could not find functions.yaml. Must use http discovery
 [debug] [2024-01-27T00:44:19.749Z] Found firebase-functions binary at 'C:\Users\asus\OneDrive\Bureau\task manager\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8192
+
+[debug] [2024-01-27T00:44:21.138Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] MongoDB Connected Successfully
+
+[info] server is listening on port 8192
+
+[debug] [2024-01-27T00:44:31.180Z] [functions] Loaded functions definitions from source: api.
+[debug] [2024-01-27T00:44:31.181Z] [functions[us-central1-api]] http function initialized (http://127.0.0.1:5000/gestionnaire-de-tache-7deac/us-central1/api).
+[info] i  functions: Loaded functions: api 
+[warn] !  functions: The following emulators are not running, calls to these services will affect production: firestore, database, pubsub, storage, eventarc 
+[debug] [2024-01-27T00:45:42.606Z] Functions emulator received unknown request at path /
