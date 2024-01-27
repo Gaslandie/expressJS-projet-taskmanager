@@ -1,7 +1,10 @@
 /* eslint-disable max-len */
 const express = require("express");
+const cors = require("cors");
 const tasks = require("./routes/tasks");
 const app = express();
+
+
 require("dotenv").config; // chargement des variables d'environnement
 const connectDB =require("./db/connection");
 
@@ -14,6 +17,8 @@ const errorHandlerMiddleware = require("./middleware/error-handler");
 app.use(express.static("../public")); // le contenu à afficher au front-end
 app.use(express.json()); // midlleware pour traiter les requetes json
 
+// configuration cors
+app.use(cors({origin: true}));
 
 // nos routes
 app.use("/api/v1/tasks", tasks);
